@@ -1,0 +1,13 @@
+<library>
+    <catalogue name="Technical Books">
+        <book>
+            <ISBN>978-1-449379-86-5</ISBN>
+            <title>Beautiful Visualization</title>
+            <author>Julie Steele, Noah Iliinsky</author>
+        </book>
+        <book>
+            <ISBN>978-0-321834-73-7</ISBN>
+            <title>The Functional Art</title>
+            <author>Alberto Cairo</author>
+        </book>
+    </catalogue>
