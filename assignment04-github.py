@@ -2,11 +2,12 @@
     The program should then commit those changes and push the file back to the repository."""
     
 
-import os
-import git
+from github import Github
 
-# Define a function to replace text in a file
-def replace_text_in_file(file_path, old_text, new_text):
-    # Open the file in read mode
-    with open(file_path, 'r') as file:
-        file_data = file.read()
+# Replace "Andrew" with "Anthony" in a file
+def replace_text_in_file(repo, file_path, old_text, new_text):
+    content = repo.get_contents(file_path)
+    file_data = content.decoded_content.decode('utf-8')
+    file_data = file_data.replace(old_text, new_text)
+    
+apikey = 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
