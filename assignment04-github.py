@@ -10,4 +10,19 @@ def replace_text_in_file(repo, file_path, old_text, new_text):
     file_data = content.decoded_content.decode('utf-8')
     file_data = file_data.replace(old_text, new_text)
     
-apikey = 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
+    # Commit the modified content to the repository
+    repo.update_file(
+        file_path,
+        "Replace 'Andrew' with 'Anthony'",
+        file_data,
+        content.sha)
+    
+    
+# GitHub credentials and repository information
+github_token = "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"
+repository_name = "https://github.com/mcgarrya28/data-representation-coursework"
+
+#Enter the location of the file that changes are to be made
+file_path = "path/to/your_file.txt"
+old_text = "Andrew"
+new_text = "Anthony"
