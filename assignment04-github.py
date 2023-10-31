@@ -19,10 +19,22 @@ def replace_text_in_file(repo, file_path, old_text, new_text):
     
     
 # GitHub credentials and repository information
-github_token = "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"
-repository_name = "https://github.com/mcgarrya28/data-representation-coursework"
+github_token = ""
+repository_name = ""
 
 #Enter the location of the file that changes are to be made
-file_path = "path/to/your_file.txt"
+file_path = 
 old_text = "Andrew"
 new_text = "Anthony"
+
+
+
+g = Github(github_token)
+
+# Access the repository
+repo = g.get_repo(repository_name)
+
+# Replace text in the file
+replace_text_in_file(repo, file_path, old_text, new_text)
+
+print("Changes committed and pushed successfully.")
